@@ -1,0 +1,101 @@
+<div class="spaceXContainer">
+  <div class="pageHeading">SpaceX Launch Programs</div>
+  <div class="menu">
+    <div class="filterHeadingLabel">
+      Filters
+    </div>
+    <!-- Year filter Heading start -->
+    <div class="filterLabel">
+      Launch Year
+    </div>
+    <!-- Year filter Heading end -->
+    <!-- Year filter start -->
+    <div class="yearContainer">
+      <div class="yearDiv">
+        <button class="year" [ngClass]="{selectedButton: activeYear === '2006'}"
+          (click)="getSpaceXdata('launch_year',2006,'2006')">2006</button>
+        <button class="year" [ngClass]="{selectedButton: activeYear === '2007'}"
+          (click)="getSpaceXdata('launch_year',2007,'2007')">2007</button>
+      </div>
+      <div class="yearDiv">
+        <button class="year" [ngClass]="{selectedButton: activeYear === '2008'}"
+          (click)="getSpaceXdata('launch_year',2008,'2008')">2008</button>
+        <button class="year" [ngClass]="{selectedButton: activeYear === '2009'}"
+          (click)="getSpaceXdata('launch_year',2009,'2009')">2009</button>
+      </div>
+      <div class="yearDiv">
+        <button class="year" [ngClass]="{selectedButton: activeYear === '2010'}"
+          (click)="getSpaceXdata('launch_year',2010,'2010')">2010</button>
+        <button class="year" [ngClass]="{selectedButton: activeYear === '2011'}"
+          (click)="getSpaceXdata('launch_year',2011,'2011')">2011</button>
+      </div>
+      <div class="yearDiv">
+        <button class="year" [ngClass]="{selectedButton: activeYear === '2012'}"
+          (click)="getSpaceXdata('launch_year',2012,'2012')">2012</button>
+        <button class="year" [ngClass]="{selectedButton: activeYear === '2013'}"
+          (click)="getSpaceXdata('launch_year',2013,'2013')">2013</button>
+      </div>
+      <div class="yearDiv">
+        <button class="year" [ngClass]="{selectedButton: activeYear === '2014'}"
+          (click)="getSpaceXdata('launch_year',2014,'2014')">2014</button>
+        <button class="year" [ngClass]="{selectedButton: activeYear === '2015'}"
+          (click)="getSpaceXdata('launch_year',2015,'2015')">2015</button>
+      </div>
+      <div class="yearDiv">
+        <button class="year" [ngClass]="{selectedButton: activeYear === '2016'}"
+          (click)="getSpaceXdata('launch_year',2016,'2016')">2016</button>
+        <button class="year" [ngClass]="{selectedButton: activeYear === '2017'}"
+          (click)="getSpaceXdata('launch_year',2017,'2017')">2017</button>
+      </div>
+      <div class="yearDiv">
+        <button class="year" [ngClass]="{selectedButton: activeYear === '2018'}"
+          (click)="getSpaceXdata('launch_year',2018,'2018')">2018</button>
+        <button class="year" [ngClass]="{selectedButton: activeYear === '2019'}"
+          (click)="getSpaceXdata('launch_year',2019,'2019')">2019</button>
+      </div>
+      <div class="yearDiv">
+        <button class="year" [ngClass]="{selectedButton: activeYear === '2020'}"
+          (click)="getSpaceXdata('launch_year',2020,'2020')">2020</button>
+      </div>
+    </div>
+    <!-- Year filter end -->
+    <!-- Successful Launch Heading start -->
+    <div class="filterLabel">
+      Successful Launch
+    </div>
+    <!-- Successful Launch Heading end -->
+    <!-- Successful Launch filter start -->
+    <div class="yearContainer">
+      <div class="yearDiv">
+        <button class="year" [ngClass]="{selectedButton: activeLaunching === 'launching-true'}"
+          (click)="getSpaceXdata('launch_success',true,'launching-true')">True</button>
+        <button class="year" [ngClass]="{selectedButton: activeLaunching === 'launching-false'}"
+          (click)="getSpaceXdata('launch_success',false, 'launching-false')">False</button>
+      </div>
+    </div>
+    <!-- Successful Launch filter end -->
+    <!-- Successful Land Heading start -->
+    <div class="filterLabel">
+      Successful Landing
+    </div>
+    <!-- Successful Land Heading end -->
+    <!-- Successful Land filter start -->
+    <div class="yearContainer">
+      <div class="yearDiv">
+        <button class="year" [ngClass]="{selectedButton: activeLanding === 'landing-true'}"
+          (click)="getSpaceXdata('land_success',true, 'landing-true')">True</button>
+        <button class="year" [ngClass]="{selectedButton: activeLanding === 'landing-false'}"
+          (click)="getSpaceXdata('land_success',false, 'landing-false')">False</button>
+      </div>
+    </div>
+    <!-- Successful Land filter end -->
+  </div>
+  <div class="main">
+    <!-- Loader  -->
+    <div *ngIf="showLoader" class="loader mt-15"></div>
+    <!-- No data found -->
+    <div *ngIf="noDataFound && !showLoader" class="noDataFound">No Data Found</div>
+    <!-- dashboard page -->
+    <app-dashboard *ngIf="spaceXData && spaceXData.length > 0;" [spaceXData]="spaceXData"></app-dashboard>
+  </div>
+</div>

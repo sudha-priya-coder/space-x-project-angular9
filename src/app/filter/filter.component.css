@@ -1,0 +1,122 @@
+
+.menu {
+  float: left;
+  width: 20%;
+  text-align: center;
+  background-color: white;
+  margin: 10px 0px 0px 20px;
+  }
+  .mt-15 {
+  margin-top: 15%;
+  
+  }
+  .main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  
+  .right {
+  
+  float: left;
+  width: 20%;
+  padding: 15px;
+  margin-top: 7px;
+  text-align: center;
+  }
+  
+  .yearContainer {
+  background-color: white;
+  margin: 10px;
+  }
+  
+  .year {
+  width: 100px;
+  height: 30px;
+  margin: 7px;
+  color: black;
+  background-color: #c5e09b;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  }
+  
+  .yearDiv {
+  display: flex;
+  justify-content: space-evenly;
+  }
+  
+  button:hover {
+  background-color: #7cba01;
+  }
+
+  .spaceXContainer {
+  color: #aaaaaa;
+  background-color: #f2f2f2;
+  overflow: hidden;
+  }
+  
+  .filterHeadingLabel {
+  color: #282828;
+  text-align: left;
+  font-weight: bold;
+  padding: 10px 10px 2px;
+  font-size: 18px;
+  }
+  .noDataFound {
+  font-size: 40px;
+  margin-top: 15%;
+  }
+  
+  .filterLabel {
+  color: #686868;
+  font-size: 15px;
+  text-decoration: underline;
+  }  
+  .pageHeading {
+  font-weight: bold;
+  color: #010101;
+  font-size: 30px;
+  padding: 5px;
+  margin-left: 20px;
+  }
+  
+  @media only screen and (max-width:701px) {
+  /* For mobile phones: */
+  .menu,.card,
+  .main {
+    width: 100%;
+    max-width: 554px;
+    text-align: center;
+    margin-left: 4%;
+  }
+  }
+
+  .selectedButton {
+  background-color: #7cba01;
+  }
+  .nonSelectedButton {
+  background-color: #c5e09b;
+  }
+ 
+  .loader {
+  border-top: 16px solid #7cba01;
+  border: 16px solid #7cba01;
+  border-radius: 10%;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+  }
+  
+  /* Safari */
+  @-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+  }

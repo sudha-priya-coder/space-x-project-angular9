@@ -1,0 +1,15 @@
+<div class="main">
+  <div class="card" *ngFor="let spaceX of spaceXData">
+    <div class="imgContainer">
+      <img class="imgWidth" [src]="spaceX['links']['mission_patch']" [alt]="spaceX['mission_name']">
+    </div>
+    <p class="missionNameColor">{{spaceX['mission_name']}} #{{spaceX['flight_number']}}</p>
+    <p><span class="blackBolder">Mission Ids : </span>{{spaceX['flight_number']}}</p>
+    <p><span class="blackBolder">Launch Year : </span> {{spaceX['launch_year']}}</p>
+    <p><span class="blackBolder">Successful Launch : </span> {{spaceX['launch_success']}}</p>
+    <p><span class="blackBolder">Landing : </span>{{spaceX['rocket']['first_stage']['cores'][0]['land_success']}}
+    </p>
+  </div>
+</div>
+
+
